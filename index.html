@@ -59,39 +59,13 @@
       }
     }
 
-    .typewriter-text {
-      display: inline-block;
-      overflow: hidden;
-      letter-spacing: 2px;
-      animation: typing 5s steps(30, end), blink 0.75s step-end infinite;
-      white-space: nowrap;
-      font-size: 30px;
-      font-weight: 700;
-      border-right: 4px solid orange;
-      box-sizing: border-box;
-    }
-
-    @keyframes typing {
-      from {
-        width: 0%;
-      }
-      to {
-        width: 100%;
-      }
-    }
-
-    @keyframes blink {
-      from,
-      to {
-        border-color: transparent;
-      }
-      50% {
-        border-color: orange;
-      }
+    .bg {
+      background-image: url("https://image.winudf.com/v2/image/Y29tLndhbGxwYXBlcnM0ay5rcmlzaG5hd2FsbHBhcGVyX3NjcmVlbl8wXzE1MzkyMzQwMDlfMDcy/screen-0.jpg?fakeurl=1&type=.jpg");
+      background-size: cover;
     }
   </style>
 </head>
-<body class="blue-grey lighten-4">
+<body class="blue-grey lighten-4 bg">
   <div class="row">
     <div class="col s12 m4 l4 offset-l4">
       <h3 class="blue-text center">Krishna Chants</h3>
@@ -111,7 +85,9 @@
         </form>
       </div>
       <div class="col s12">
-        <div id="showdata"></div>
+        <div class="card-panel">
+          <div id="showdata"></div>
+        </div>
       </div>
       <h5>From Raghootham Kalkeri</h5>
     </div>

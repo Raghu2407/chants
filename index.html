@@ -1,0 +1,148 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Materialize icons -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <link rel="stylesheet" href="css/raghu.css" />
+  <title>Assignment</title>
+  <style>
+    .tabs .indicator {
+      position: absolute;
+      bottom: 0;
+      height: 2px;
+      background-color: #3f51b5;
+      will-change: left, right;
+    }
+
+    .tabs .tab a {
+      color: #3f51b5;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .tabs .tab a:hover,
+    .tabs .tab a.active {
+      background-color: transparent;
+      color: #b1787a;
+    }
+
+    .tabs {
+      font-family: "lato", sans-serif;
+      font-weight: ;
+    }
+
+    .goal {
+      font-family: "Galada", cursive;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .gallery-image {
+        min-height: 10vh;
+        height: auto;
+        max-height: 10vh;
+      }
+
+      .brand-logo {
+        width: 400px;
+      }
+    }
+
+    @media only screen and (min-width: 900px) {
+      .gallery-image {
+        min-height: 30vh;
+        height: auto;
+        max-height: 30vh;
+      }
+    }
+
+    .typewriter-text {
+      display: inline-block;
+      overflow: hidden;
+      letter-spacing: 2px;
+      animation: typing 5s steps(30, end), blink 0.75s step-end infinite;
+      white-space: nowrap;
+      font-size: 30px;
+      font-weight: 700;
+      border-right: 4px solid orange;
+      box-sizing: border-box;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange;
+      }
+    }
+  </style>
+</head>
+<body class="blue-grey lighten-4">
+  <div class="row">
+    <div class="col s12 m4 l4 offset-l4">
+      <div class="card-panel">
+        <form method="POST">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" name="no-chats" id="no_of_chants" />
+              <label for="no_of_chants">Set no of chants</label>
+            </div>
+            <div class="input-field col s12">
+              <button type="button" class="btn orange" onclick="myfunction()">
+                Click to show chants
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col s12">
+        <div id="showdata"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+  <script>
+    var j = 0;
+    var txt =
+      "<h5 class='typewriter-texts'>Hare Rama Hare Rama <span class='orange-text'> Rama Rama Hare Hare</span>Hare Krishna Hare Krishna <span class='orange-text'> Krishna Krishna Krishna Hare Hare</span></h5>";
+    var speed = 50;
+    function time(i) {
+      setTimeout(function() {
+        $("#showdata").append(
+          '<div id="r' +
+            i +
+            '" class="green-text"><h5 class="blue-text">' +
+            txt +
+            "</div>"
+        );
+      }, 5000 * i);
+    }
+
+    function myfunction() {
+      var num = $("#no_of_chants").val();
+      //alert(num);
+      for (i = 0; i < num; i++) {
+        // var show = $("#showdata").html(Iam);
+
+        time(i);
+      }
+    }
+  </script>
+</body>
